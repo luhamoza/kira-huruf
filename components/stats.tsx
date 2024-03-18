@@ -12,15 +12,24 @@ type StatsProps = {
   style: string;
 };
 
-export default function Stats(statInfo: { textLength: number; words: number }) {
+export default function Stats(statInfo: {
+  textLength: number;
+  words: number;
+  uppercase: number;
+  lowercase: number;
+  special: number;
+}) {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Stats</CardTitle>
-        <CardDescription>analysis ayat anda</CardDescription>
+        <CardTitle>Kiraan</CardTitle>
+        <CardDescription>analisis kiraan huruf anda</CardDescription>
       </CardHeader>
       <StatsInfo label="Perkataan" number={statInfo.words} style="" />
       <StatsInfo label="Huruf" number={statInfo.textLength} style="" />
+      <StatsInfo label="Huruf besar" number={statInfo.uppercase} style="" />
+      <StatsInfo label="Huruf kecil" number={statInfo.lowercase} style="" />
+      <StatsInfo label="Karakter khas" number={statInfo.special} style="" />
     </Card>
   );
 }
