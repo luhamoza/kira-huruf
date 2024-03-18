@@ -25,10 +25,10 @@ export default function Stats(statInfo: {
         <CardTitle>Kiraan</CardTitle>
         <CardDescription>analisis kiraan huruf anda</CardDescription>
       </CardHeader>
-      <StatsInfo label="Perkataan" number={statInfo.words} style="" />
       <StatsInfo label="Huruf" number={statInfo.textLength} style="" />
       <StatsInfo label="Huruf besar" number={statInfo.uppercase} style="" />
       <StatsInfo label="Huruf kecil" number={statInfo.lowercase} style="" />
+      <StatsInfo label="Perkataan" number={statInfo.words} style="" />
       <StatsInfo label="Karakter khas" number={statInfo.special} style="" />
     </Card>
   );
